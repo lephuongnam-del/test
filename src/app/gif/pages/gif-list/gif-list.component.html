@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>ALL the GIFS</h1>
+    <div class="gifs ">
+        <div class="gif" *ngFor="let gif of gifs">
+            <img [src]="gif.images.downsized.url" alt="image" [routerLink]="['/trending',gif.id]">
+        </div>
+    </div>
+</div>

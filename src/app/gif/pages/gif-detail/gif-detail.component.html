@@ -1,0 +1,40 @@
+<div class="container" *ngIf="(gif$|async) as gif, else loading">
+    <div class="content-left ">
+        <!-- <img [src]="gif.data?.user.banner_image" alt=""> -->
+        <div class="user" >
+            <img class="avatar" [src]="gif.data.user.avatar_url" alt="avatar">
+            <span>{{gif.data?.user.username}}</span>
+        </div>
+        <div class="user-info">
+            <h4> {{gif.data?.user.display_name}}</h4> <br>
+            <span>
+                {{gif.data?.user.description}}
+            </span>
+        </div>
+
+    </div>
+    <div class="content ">
+        <h3>{{gif.data.title}}</h3>
+        <div class="gif ">
+             <img nz-image
+             [nzSrc]="gif.data.images.downsized.url"
+             alt="image">
+                    
+        </div>
+        <h3>click to expand</h3>
+    </div>
+
+    <div class="content-right">
+        <div *ngIf="gif.data.rating === 'g' ; else level" >
+            <app-rating-level-g></app-rating-level-g>
+        </div>
+        <ng-template #level>
+            <app-rating-level-pg></app-rating-level-pg>
+        </ng-template>
+        
+    </div>
+
+</div>
+<ng-template #loading>
+    loading
+</ng-template>

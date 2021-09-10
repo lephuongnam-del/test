@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        color      : white;
+        display    : block;
+        margin-left: -189px;
+
+        h3 {
+            color: inherit;
+            padding-bottom: 30px;
+        }
+
+        .gif {
+            width          : 517px;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            .zoom {
+
+                margin-left: -407px;
+                margin-top : 275px;
+
+                a {
+                    position        : absolute;
+                    width           : 40px;
+                    height          : 40px;
+                    background-color: white;
+                    color           : black;
+                    display         : flex;
+                    justify-content : center;
+                    align-items     : center;
+                }
+            }
+
+
+        }
+
+    }
+
+    .content-left {
+        width   : 10%;
+        color   : white;
+        position: relative;
+        left: -251px;
+        img {
+            width: inherit;
+        }
+
+        .user {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            .avatar {
+                width      : 50px !important;
+                padding-top: 10px;
+            }
+        }
+
+
+    }
+
+    
+}
